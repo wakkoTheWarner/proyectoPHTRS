@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>draftThankyoupageNSU</title>
+    	<link href="draftThankyouPageNSU.css" rel="stylesheet" type="text/css">
+	</head>
+
+	<body>
+		<header>
+			<div class="imgDPWlogo">
+				<a href="draftHomepage.html">
+					<img src="Img/PWlogo.png" alt="" width="180">
+				</a>
+			</div>
+			<div class="textLogo">
+				<a href="draftHomepage.html">The Department of Public Works</a>
+				<a href="draftHomepage.html">
+					<h1>Pothole Reporting System</h1>
+				</a>
+		  	</div>
+			<div class="rImage">
+				<a href="draftHomepage.html">
+					<img src="Img/RoadWorkRepairLogo.png" alt="" width="190">
+				</a>
+			</div>
+		</header>
+		<nav>
+			<div class="navSearch">
+				<a href="draftUserpage.html">HOME</a>
+			</div>
+		</nav>
+		<main>
+			<div class="ThankYouMessage">
+				<h1>
+				Report Completed! 
+				</h1>
+				<p>
+					<strong>Thank You!</strong> We appreciate your report of a pothole on our roads. Your report is very important to us and helps us improve our services. We will quickly look into it and update you on the status of the issue. Thank you for your patience and understanding.
+				</p>
+			</div>
+			<div class="returnhomebttn">
+				<a href="draftUserpage.html">RETURN TO HOME</a>
+			</div>
+		</main>
+		<footer>
+			<p>@ DRAFT WEBSITE IN PROGRESS</p>
+		</footer>
+		
+		<script>
+			const potholeReportForm = document.querySelector("#pothole-report-form");
+			potholeReportForm.addEventListener("submit", function(event) {
+				event.preventDefault();
+				// Do something with the form data, such as sending it to a server
+				window.location.href = "thank-you.html";
+				// Reset the form
+				potholeReportForm.reset();
+			});
+		</script>
+    </body>
+</html>

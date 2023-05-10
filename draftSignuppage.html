@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>draftSignUppage</title>
+    	<link href="draftSignuppage.css" rel="stylesheet" type="text/css">
+	</head>
+
+	<body>
+		<header>
+			<div class="imgDPWlogo">
+				<a href="draftHomepage.html">
+					<img src="Img/PWlogo.png" alt="" width="180">
+				</a>
+			</div>
+			<div class="textLogo">
+				<a href="draftHomepage.html">The Department of Public Works</a>
+				<a href="draftHomepage.html">
+					<h1>Pothole Reporting System</h1>
+				</a>
+		  	</div>
+			<div class="rImage">
+				<a href="draftHomepage.html">
+					<img src="Img/RoadWorkRepairLogo.png" alt="" width="190">
+				</a>
+			</div>
+		</header>
+		<nav>
+			<div class="navSearch">
+				<a href="draftHomepage.html">HOME</a>
+			</div>
+		</nav>
+		<main>
+			<h1>Sign Up</h1>
+			<form id="signup-form">
+				<label for="fullname">Full Name:</label>
+				<input type="text" id="fullname" name="fullname" required>
+				<label for="phone">Phone number:</label>
+				<input type="tel" id="phone" name="phone" required>
+				<label for="phone">Email:</label>
+				<input type="text" id="email" name="email" required>
+				<label for="address">Address:</label>
+				<input type="text" id="address" name="address" required>
+				<label for="password">Password:</label>
+				<input type="password" id="password" name="password" required>
+				<label for="repeatpassword">Repeat Password:</label>
+				<input type="password" id="repeatpassword" name="repeatpassword" required>
+				<button type="submit">Submit</button>
+			</form>
+		</main>
+		<footer>
+			<p>@ DRAFT WEBSITE IN PROGRESS</p>
+		</footer>
+		
+		<script>
+			const potholeReportForm = document.querySelector("#signup-form");
+			potholeReportForm.addEventListener("submit", function(event) {
+				event.preventDefault();
+				// Do something with the form data, such as sending it to a server
+				window.location.href = "draftThankyou4SignUpPage.html";
+				// Reset the form
+				potholeReportForm.reset();
+			});
+		</script>
+    </body>
+</html>

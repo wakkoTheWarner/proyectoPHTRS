@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>draftReportpage</title>
+    	<link href="draftReportpage.css" rel="stylesheet" type="text/css">
+	</head>
+
+	<body>
+		<header>
+			<div class="imgDPWlogo">
+				<a href="draftHomepage.html">
+					<img src="Img/PWlogo.png" alt="" width="180">
+				</a>
+			</div>
+			<div class="textLogo">
+				<a href="draftHomepage.html">The Department of Public Works</a>
+				<a href="draftHomepage.html">
+					<h1>Pothole Reporting System</h1>
+				</a>
+		  	</div>
+			<div class="rImage">
+				<a href="draftHomepage.html">
+					<img src="Img/RoadWorkRepairLogo.png" alt="" width="190">
+				</a>
+			</div>
+		</header>
+		<nav>
+			<div class="navSearch">
+				<a href="draftHomepage.html">HOME</a>
+				<a href="draftSignuppage.html">SIGN UP</a>
+			</div>
+		</nav>
+		<main>
+			<h1>Report a Pothole</h1>
+			<p class="warnmessage"><strong>IMPORTANT NOTE:</strong> Please note that you need to be logged in to our website to be eligible for any damage compensation. If you are not logged in, you will not be able to claim any reimbursement for your losses. Thank you for your cooperation and understanding.</p>
+			<form id="pothole-report-form">
+				<h2>User Details</h2>
+				<label for="username">Full Name:</label>
+				<input type="text" id="fullname" name="fullname" required>
+				<label for="phone">Phone number:</label>
+				<input type="tel" id="phone" name="phone" required>
+				<label for="phone">Email:</label>
+				<input type="text" id="email" name="email" required>
+				<label for="useraddress">Your Address:</label>
+				<input type="text" id="useraddress" name="useraddress" required>
+				<h2>Pothole Details</h2>
+				<label for="address">Pothole Address:</label>
+				<input type="text" id="address" name="address" required>
+				<label for="district">District:</label>
+				<select id="district" name="district" required>
+					<option value="">Select a district</option>
+					<option value="District 1">District 1</option>
+					<option value="District 2">District 2</option>
+					<option value="District 3">District 3</option>
+				</select>
+				<label for="size">Size:</label>
+				<select id="size" name="size" required>
+					<option value="">-- Select Size --</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+					<option value="9">9</option>
+					<option value="10">10</option>
+				</select>
+				<label for="address">Lane Location:</label>
+				<input type="text" id="lanelocation" name="lanelocation">
+				<h2>Damage Details</h2>
+				<label for="address">Damage Type</label>
+				<input type="text" id="damagetype" name="damagetype" disabled>
+				<button type="submit">Submit</button>
+			</form>
+		</main>
+		<footer>
+			<p>@ DRAFT WEBSITE IN PROGRESS</p>
+		</footer>
+		
+		<script>
+			const potholeReportForm = document.querySelector("#pothole-report-form");
+			potholeReportForm.addEventListener("submit", function(event) {
+				event.preventDefault();
+				// Do something with the form data, such as sending it to a server
+				window.location.href = "draftThankyouPageNSU.html";
+				// Reset the form
+				potholeReportForm.reset();
+			});
+		</script>
+    </body>
+</html>

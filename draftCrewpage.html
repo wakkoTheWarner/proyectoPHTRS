@@ -1,0 +1,168 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>draftCrewpage</title>
+    	<link href="draftUserpage.css" rel="stylesheet" type="text/css">
+	</head>
+
+	<body>
+		<header>
+			<div class="textLogo">
+				<a href="">The Department of Public Works</a>
+				<a href="">
+					<h1>Pothole Reporting System</h1>
+				</a>
+				<a class="govaccess" href="#"><strong>AUTHORIZED CREW ACCESS</strong></a>
+			</div>
+		</header>
+		<nav>
+			<div class="navSearch">
+				<a href="draftHomepage.html">LOG OUT</a>
+			</div>
+		</nav>
+		<main>
+			<h2>Your Repair Crew</h2>
+			<table>
+				<thead>
+					<tr>
+						<th>Your Repair Crew ID</th>
+						<th># of people in Crew</th>
+						<th>Crew Supervisor</th>
+						<th>Supervisor Phone Number</th>
+						<th>Supervisor Email</th>
+						<th>Availability</th>
+      				</tr>
+				</thead>
+				<tbody>
+      				<tr>
+						<td><a href="#">456</a></td>
+						<td>5</td>
+						<td>James Darrell</td>
+						<td>243-4654</td>
+						<td>repairCrew456@email.com</td>
+						<td>Unavailable</td>
+      				</tr>
+					<!-- Add more rows as needed -->
+				</tbody>
+			</table>
+			<h2>Work Orders</h2>
+			<table>
+				<thead>
+					<tr>
+						<th>Pothole ID</th>
+						<th>Repair Crew ID</th>
+						<th>Equiptment Assigned</th>
+						<th>Hours Worked on Pothole</th>
+						<th>Amount of Filler Used</th>
+						<th>Cost of Repair</th>
+      				</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>11265</td>
+						<td>456</td>
+						<td>Excavator</td>
+						<td>2</td>
+						<td>10 lbs</td>
+						<td>$200</td>
+					</tr>
+					<!-- Add more rows as needed -->
+				</tbody>
+			</table>
+			<h2>Potholes</h2>
+			<table>
+				<thead>
+					<tr>
+						<th>Pothole ID</th>
+						<th>District</th>
+						<th>Address</th>
+						<th>Lane Location</th>
+						<th>Size</th>
+						<th>Repair Priority</th>
+						<th>Hole Status</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>11256</td>
+						<td>District 1</td>
+						<td>789 Oak St.</td>
+						<td>Mid</td>
+						<td>8</td>
+						<td>High</td>
+						<td>Repaired</td>
+					</tr>
+				</tbody>
+			</table>
+			<div class="userForm">
+				<h1>Crew Profile</h1>
+				<form id="pothole-report-form">
+					<label for="crewID">Crew ID:</label>
+					<input type="text" id="crewID" name="crewID" required placeholder="456" disabled>
+					<label for="fullname">Crew Supervisor Full Name:</label>
+					<input type="text" id="fullname" name="fullname" required placeholder="James Darrell">
+					<label for="phone">Crew Supervisor Phone Number:</label>
+					<input type="tel" id="phone" name="phone" required placeholder="243-4654">
+					<label for="phone">Crew Supervisor Email:</label>
+					<input type="text" id="email" name="email" required placeholder="repairCrew456@email.com">
+					<label for="password">Password: [Talk to Staff to Change This]</label>
+					<input type="password" id="password" name="password" placeholder="Authenticator*" disabled>
+					<label for="availability">Availability:</label>
+					<select id="availability" name="availability" required>
+						<option value="">Select Availability</option>
+						<option value="District 1">Available</option>
+						<option value="District 2">Unavailable</option>
+						<option value="District 3">On Leave</option>
+					</select>
+					<button type="submit">Submit Changes</button>
+				</form>
+			</div>
+		</main>
+		<footer>
+			<p>@ DRAFT WEBSITE IN PROGRESS</p>
+		</footer>
+		
+		<script>
+			window.onload = function() {
+		  	const loginForm = document.querySelector("#login-form");
+		  	const passwordInput = document.querySelector("#password");
+		  	const generatedPassword = document.querySelector("#generated-password");
+
+		  	// Generate random password when webpage finishes loading
+		  	const password = Math.random().toString(36).slice(-8);
+		  	generatedPassword.innerText = `Gov password: ${password}`;
+
+		  	loginForm.addEventListener("submit", function(event) {
+				event.preventDefault();
+
+				const username = document.querySelector("#username").value;
+
+				if (username === "yourusername" && password === "yourpassword") {
+			  		window.location.href = "http://www.youtube.com";
+				} else if (username === "anotherusername" && password === "anotherpassword") {
+			  		window.location.href = "http://yourwebsite.com/anotherpage.html";
+				} else if (username === "govID" && password === passwordInput.value) {
+			  		window.location.href = "http://www.google.com";
+				} else {
+			  		alert("Invalid username or password");
+				}
+				
+				// Reset input values
+  				document.querySelector("#username").value = "";
+  				document.querySelector("#password").value = "";
+		  	});
+
+		  	const thumbsUpButtons = document.querySelectorAll(".thumbs-up-button");
+		  	thumbsUpButtons.forEach(function(button) {
+				button.addEventListener("click", function() {
+			  	const count = parseInt(button.getAttribute("data-count"));
+			  	const newCount = count + 1;
+			  	button.setAttribute("data-count", newCount);
+			  	button.innerText = newCount;
+				});
+		  	});
+			};
+		</script>
+    </body>
+</html>

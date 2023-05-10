@@ -1,0 +1,146 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>draftHomepageNSU</title>
+    	<link href="draftHomepage.css" rel="stylesheet" type="text/css">
+	</head>
+
+	<body>
+		<header>
+			<div class="imgDPWlogo">
+				<a href="#">
+					<img src="Img/PWlogo.png" alt="" width="180">
+				</a>
+			</div>
+			<div class="textLogo">
+				<a href="#">The Department of Public Works</a>
+				<a href="#">
+					<h1>Pothole Reporting System</h1>
+				</a>
+		  	</div>
+			<div class="rImage">
+				<a href="#">
+					<img src="Img/RoadWorkRepairLogo.png" alt="" width="190">
+				</a>
+			</div>
+		</header>
+		<nav>
+			<div class="navSearch">
+				<a href="draftReportpage.html">REPORT NOW!</a>
+			</div>
+		</nav>
+		<section class="loginFormSect">
+			<div class="login-section">
+				<h2>Login</h2>
+				<form id="login-form">
+					<label for="username">Email:</label>
+					<input type="text" id="username" name="username" required placeholder="Email">
+					<label for="password">Password:</label>
+					<input type="password" id="password" name="password" required placeholder="Password">
+					<button type="submit">Log In</button>
+					<br>
+					<a href="draftSignuppage.html" class="signup">Sign Up</a>
+					<div class="genPasFont" id="generated-password"></div>
+			  	</form>
+			</div>
+		</section>
+		<main>
+			<table>
+				<thead>
+					<tr>
+						<th>Pothole ID</th>
+					  	<th>Address</th>
+						<th>District</th>
+					  	<th>Lane Location</th>
+					  	<th>Size</th>
+					  	<th>Status</th>
+						<th>Helpful</th>
+				  	</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>11843</td>
+						<td>123 Main St.</td>
+						<td>District 3</td>
+						<td>Right Lane</td>
+						<td>3</td>
+						<td>Not Repaired</td>
+						<td>
+          					<button class="thumbs-up-button" data-count="0">0</button>
+        				</td>
+				  	</tr>
+					<tr>
+						<td>13462</td>
+						<td>456 Elm St.</td>
+						<td>District 2</td>
+						<td>Left Lane </td>
+						<td>7</td>
+						<td>Work In Progress</td>
+						<td>
+          					<button class="thumbs-up-button" data-count="0">0</button>
+        				</td>
+					</tr>
+					<tr>
+						<td>11265</td>
+						<td>789 Oak St.</td>
+						<td>District 1</td>
+						<td>Middle Lane</td>
+						<td>8</td>
+						<td>Repaired</td>
+						<td>
+          					<button class="thumbs-up-button" data-count="0">0</button>
+        				</td>
+					</tr>
+				</tbody>
+			</table>
+		</main>
+		<footer>
+			<p>@ DRAFT WEBSITE IN PROGRESS</p>
+		</footer>
+		
+		<script>
+			window.onload = function() {
+				const loginForm = document.querySelector("#login-form");
+				const generatedPassword = document.querySelector("#generated-password");
+  
+			  	// Generate random password when webpage finishes loading
+			  	const password = Math.random().toString(36).slice(-8);
+			  	generatedPassword.innerText = `Generated password: ${password}`;
+
+			  	loginForm.addEventListener("submit", function(event) {
+					event.preventDefault();
+
+					const username = document.querySelector("#username").value;
+					const passwordInput = document.querySelector("#password");
+
+					if (username === "johnSmith@email.com" && passwordInput.value === "yourpassword") {
+				  		window.location.href = "draftUserpage.html";
+					} else if (username === "janeDoe@email.com" && passwordInput.value === "anotherpassword") {
+				  		window.location.href = "http://yourwebsite.com/anotherpage.html";
+					} else if (username === "Brown.Kevin@email.gov" && passwordInput.value === password) {
+				  		window.location.href = "draftGovpage.html";
+					} else if (username === "repairCrew456@email.com" && passwordInput.value === password) {
+						window.location.href = "draftCrewpage.html";
+					} else {
+				  		alert("Invalid username or password");
+					}
+					
+					// Reset input values
+  					document.querySelector("#username").value = "";
+  					document.querySelector("#password").value = "";
+			  	});
+
+		  	const thumbsUpButtons = document.querySelectorAll(".thumbs-up-button");
+		  	thumbsUpButtons.forEach(function(button) {
+				button.addEventListener("click", function() {
+			  	const count = parseInt(button.getAttribute("data-count"));
+			  	const newCount = count + 1;
+			  	button.setAttribute("data-count", newCount);
+			  	button.innerText = newCount;
+				});
+		  	});
+			};
+		</script>
+    </body>
+</html>

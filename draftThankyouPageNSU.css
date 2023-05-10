@@ -1,0 +1,119 @@
+/* -----------BODY----------- */
+
+body {
+	font-family: sans-serif;
+	margin: 0;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	overflow-x: hidden;
+}
+
+/* -----------HEADER----------- */
+
+header {
+	display: flex;
+	margin: auto;
+	align-items: center;
+	padding: 20px;
+	justify-content: center;
+	background: #C14B7A;
+	width: 100%
+}
+
+.textLogo h1 {
+	text-transform: uppercase;
+	margin: 0px;
+	letter-spacing: 1px;
+}
+
+.textLogo a {
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	text-decoration: none;
+	color: white;
+}
+
+.imgDPWlogo, .rImage {
+	margin: 0px 20px 0px 20px;
+}
+
+.textLogo {
+	text-align: center;
+}
+
+/* -----------NAV----------- */
+
+nav {
+	width: 100%;
+	background-color: #FFF6E6;
+	display: flex;
+	overflow: hidden;
+	justify-content: center;
+}
+
+.navSearch a {
+	display: inline-block;
+	color: black;
+	text-align: center;
+	padding: 20px 50px;
+	text-decoration: none;
+	font-size: 17px;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+.navSearch a:hover {
+	background-color: #FFE4B5;
+}
+
+/*-----------MAIN-----------*/
+
+main {
+	padding: 20px;
+	margin: auto;
+  	max-width: 800px;
+	flex-grow: 1;
+	align-items: center;
+	justify-content: center;
+}
+
+.ThankYouMessage {
+	background-color: #FFF6E6;
+	border-radius: 5px;
+	padding: 20px;
+}
+
+.returnhomebttn {
+	text-align: center;
+	padding: 30px;
+	margin: auto;
+}
+
+.returnhomebttn a {
+	text-transform: uppercase;
+	text-decoration: none;
+	font-size: 17px;
+	font-weight: bold;
+	background-color: #C14B7A;
+	padding: 20px;
+	border-radius: 5px;
+	color: white;
+}
+
+.returnhomebttn a:hover {
+	background-color: #A13761;
+}
+
+/*-----------FOOTER-----------*/
+
+footer {
+	display: flex;
+	margin: auto;
+	align-items: center;
+	padding: 30px;
+	justify-content: center;
+	background: #C14B7A;
+	color: white;
+	width: 100%
+}
